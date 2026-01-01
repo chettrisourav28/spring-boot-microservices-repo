@@ -4,10 +4,10 @@ on:
   push:
     paths:
       - catalog-service/**
-        - .github/workflows/**
-        - mvnw
-        - pom.xml
-        - .gitattributes
+      - .github/workflows/**
+      - mvnw
+      - pom.xml
+      - .gitattributes
     branches:
       - '**'
 
