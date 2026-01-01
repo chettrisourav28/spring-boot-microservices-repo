@@ -4,6 +4,10 @@ on:
   push:
     paths:
       - catalog-service/**
+        - .github/workflows/**
+        - mvnw
+        - pom.xml
+        - .gitattributes
     branches:
       - '**'
 
@@ -30,6 +34,6 @@ jobs:
         run: chmod +x ../mvnw
 
       - name: Build with Maven
-        run: bash mvnw -ntp verify
+        run: bash ../mvnw -ntp verify
 
 
