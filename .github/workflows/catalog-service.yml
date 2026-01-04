@@ -47,6 +47,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         run: |
           bash ../mvnw spring-boot:build-image \
-            -DskipTests \
-            -Dspring-boot.build-image.imageName=${{ secrets.DOCKER_USERNAME }}/bookstore-catalog-service
+          -DskipTests \
+          -Dspring-boot.build-image.imageName=${{ secrets.DOCKER_USERNAME }}/bookstore-catalog-service:latest \
+          -Dspring-boot.build-image.publish=true
       
